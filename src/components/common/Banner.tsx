@@ -1,13 +1,18 @@
-function Banner() {
+function Banner({
+  image,
+  title,
+  description,
+}: {
+  image: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="banner">
-      <img
-        src="https://img.freepik.com/free-photo/jungle-forest-view-tropical-trees-generative-ai_169016-29338.jpg"
-        alt=""
-      />
+      <img src={image} alt="" />
       <div className="banner-content">
-        <h2>Great Stories for Children</h2>
-        <p>Ruskin Bond - The Most-loved stories by award-winning Author</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
         <button>Explore now</button>
       </div>
     </div>

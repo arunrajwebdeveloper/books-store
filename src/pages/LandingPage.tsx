@@ -1,12 +1,12 @@
 import BookGroup from "../components/book/BookGroup";
-import Banner from "../components/common/Banner";
 import { books } from "../assets/data/books";
 import PageLayout from "../layouts/PageLayout";
+import BannerSlider from "../components/common/BannerSlider";
 
 function LandingPage() {
   return (
     <PageLayout>
-      <Banner />
+      <BannerSlider />
       <BookGroup bookList={books} />
     </PageLayout>
   );

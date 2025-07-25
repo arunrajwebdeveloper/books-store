@@ -11,8 +11,8 @@ function BookGroup({ bookList }: { bookList: any }) {
             <h2>{title}</h2>
             <div className="shelf-container">
               {books?.map(({ id, cover, price, pages, rating }) => (
-                <Link to={`/book/${123}`} className="book-link">
-                  <Book key={id} cover={cover} />
+                <Link to={`/book/${123}`} className="book-link" key={id}>
+                  <Book cover={cover} />
                   <div className="book-details">
                     <div className="rating">
                       <StarRating rating={rating} />

@@ -5,7 +5,7 @@ function Book({ cover }: { cover: string }) {
         <div className="flip-page-left"></div>
         <div className="flip-page-right"></div>
         <div className="flip-cover clickable-card">
-          <img alt="Book cover image" src={cover} />
+          <img alt="Book cover image" src={cover} loading="lazy" />
           <div className="read-label"></div>
         </div>
       </div>

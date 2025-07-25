@@ -12,6 +12,7 @@ function BookPage() {
               <img
                 src="https://tinybeans.com/wp-content/uploads/2017/09/9781438050195.jpg"
                 alt="book thumbnail"
+                loading="lazy"
               />
             </div>
           </div>

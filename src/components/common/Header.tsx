@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header className="main-header">
-      <h2 className="logo">soarling</h2>
+      <Link to="/" className="logo">
+        <h2>soarling</h2>
+      </Link>
       <nav className="navigation">
         <ul>
           <li>

@@ -163,19 +163,19 @@
     90deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   background: -moz-linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
 }
@@ -185,19 +185,19 @@
     270deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   background: -moz-linear-gradient(
     270deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   background: linear-gradient(
     270deg,
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0.4) 13%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(0, 0, 0, 0) 50%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=0);
 }

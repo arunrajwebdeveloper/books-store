@@ -32,6 +32,11 @@ body {
   border-bottom: 1px solid #eee;
 }
 .logo {
+  text-decoration: none;
+  display: block;
+  outline: 0;
+}
+.logo h2 {
   color: orangered;
   font-size: 22px;
   margin: 0;
