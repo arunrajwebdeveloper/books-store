@@ -137,14 +137,6 @@ const FlipBook = () => {
     };
   }, []);
 
-  const jumpToPage = (index: number) => {
-    console.log("index :>> ", index);
-    // Jump logic placeholder (implement logic here if needed)
-    // Example: calculate how many flips are required to reach index, then update flippedPages accordingly
-
-    setShowSidebar(false);
-  };
-
   const isAtStart = flippedPages.length === 0;
   const isAtEnd = flippedPages.length >= totalSheets;
   const isOpened = flippedPages.length > 0;
@@ -185,6 +177,55 @@ const FlipBook = () => {
 
   const handleGoBack = () => {
     navigate(-1);
+  };
+
+  // --- MODIFIED JUMP TO PAGE ---
+  const jumpToPage = (targetPageIndex: number) => {
+    console.log("targetPageIndex :>> ", targetPageIndex);
+
+    return;
+
+    const targetSheetFrontPageIndex = Math.ceil(targetPageIndex / 2) * 2;
+    const currentSheetFrontPageIndex = flippedPages.length * 2;
+    setShowSidebar(false);
+    if (targetSheetFrontPageIndex === currentSheetFrontPageIndex) {
+      return;
+    }
+
+    flippingPages.current.clear();
+    setIsTurning(false);
+    let delay = 0;
+    const flipDuration = 400;
+    // If jumping forward
+    if (targetSheetFrontPageIndex > currentSheetFrontPageIndex) {
+      for (
+        let i = currentSheetFrontPageIndex;
+        i < targetSheetFrontPageIndex;
+        i += 2
+      ) {
+        setTimeout(() => {
+          setFlippedPages((prev) => [...prev, i]);
+        }, delay);
+        delay += flipDuration;
+      }
+    }
+    // If jumping backward
+    else {
+      for (
+        let i = currentSheetFrontPageIndex;
+        i > targetSheetFrontPageIndex;
+        i -= 2
+      ) {
+        setTimeout(() => {
+          setFlippedPages((prev) => {
+            const updated = [...prev];
+            updated.pop();
+            return updated;
+          });
+        }, delay);
+        delay += flipDuration;
+      }
+    }
   };
 
   return (
