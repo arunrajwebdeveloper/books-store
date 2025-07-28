@@ -149,6 +149,23 @@ const FlipBook = () => {
   const isAtEnd = flippedPages.length >= totalSheets;
   const isOpened = flippedPages.length > 0;
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (isTurning) return;
+
+      if (e.key === "ArrowRight" && !isAtEnd) {
+        handleFlip(true);
+      } else if (e.key === "ArrowLeft" && !isAtStart) {
+        handleFlip(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isAtStart, isAtEnd, isTurning, flippedPages]);
+
   const bookClassName = `book-flip ${
     isAtEnd ? "last-page centered-right" : isOpened ? "centered-left" : ""
   }`;
