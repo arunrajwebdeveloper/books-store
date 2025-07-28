@@ -166,6 +166,19 @@ const FlipBook = () => {
     };
   }, [isAtStart, isAtEnd, isTurning, flippedPages]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === "l") {
+        setShowSidebar((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showSidebar]);
+
   const bookClassName = `book-flip ${
     isAtEnd ? "last-page centered-right" : isOpened ? "centered-left" : ""
   }`;
