@@ -5,7 +5,9 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
+  background-image: url("../images/bright-squares.png");
+  background-position: center center;
 }
 
 .book-flip {

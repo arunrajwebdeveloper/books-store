@@ -181,10 +181,7 @@ const FlipBook = () => {
 
   // --- MODIFIED JUMP TO PAGE ---
   const jumpToPage = (targetPageIndex: number) => {
-    console.log("targetPageIndex :>> ", targetPageIndex);
-
     return;
-
     const targetSheetFrontPageIndex = Math.ceil(targetPageIndex / 2) * 2;
     const currentSheetFrontPageIndex = flippedPages.length * 2;
     setShowSidebar(false);
